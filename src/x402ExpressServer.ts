@@ -7,7 +7,8 @@ import { distributeIncomingPayment, validateAddresses } from "./smartDistributio
 // Load environment variables from .env file
 config();
 
-const REPORTS_API_BASE = process.env.REPORTS_API_BASE || "https://cryptotwitter.space";
+// Hardcoded for troubleshooting
+const REPORTS_API_BASE = "https://cryptotwitter.space";
 
 // Validate and get the receiving wallet address from environment variables
 const RECEIVING_WALLET_ADDRESS = process.env.RECEIVING_WALLET_ADDRESS as `0x${string}`;

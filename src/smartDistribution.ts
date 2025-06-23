@@ -19,8 +19,8 @@ const DISTRIBUTION_CONFIG = {
 // Contract addresses
 const USDC_CONTRACT_ADDRESS = process.env.USDC_CONTRACT_ADDRESS as `0x${string}`;
 
-// Smart account address
-const SMART_ACCOUNT_ADDRESS = process.env.SMART_ACCOUNT_ADDRESS as `0x${string}`;
+// Smart account address - Hardcoded for troubleshooting
+const SMART_ACCOUNT_ADDRESS = "0x816B7C866FbC2C12B9eCd4adD88f56Ae5E76D291" as `0x${string}`;
 
 // Validate required environment variables
 const requiredEnvVars = [
