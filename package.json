@@ -4,15 +4,10 @@
     "reports": "./build/x402ExpressServer.js"
   },
   "scripts": {
-    "build": "tsc && chmod 755 build/x402ExpressServer.js && chmod 755 build/x402McpServer.js",
+    "build": "tsc && chmod 755 build/x402ExpressServer.js",
     "build:express": "tsc && chmod 755 build/x402ExpressServer.js",
     "start:express": "node --loader ts-node/esm src/x402ExpressServer.ts",
     "dev:express": "nodemon --quiet --exec node --loader ts-node/esm src/x402ExpressServer.ts 2>/dev/null",
-    "build:mcp": "tsc && chmod 755 build/x402McpServer.js",
-    "start:mcp": "node --loader ts-node/esm src/x402McpServer.ts",
-    "dev:mcp": "nodemon --quiet --exec node --loader ts-node/esm src/x402McpServer.ts 2>/dev/null",
-    "start:all": "concurrently \"npm run start:express\" \"npm run start:mcp\"",
-    "dev:all": "concurrently \"npm run dev:express\" \"npm run dev:mcp\"",
     "lint": "eslint \"{src,apps,libs}/**/*.ts\""
   },
   "dependencies": {

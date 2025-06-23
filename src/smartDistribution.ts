@@ -1,5 +1,3 @@
-// smartDistribution.ts
-
 import { CdpClient } from "@coinbase/cdp-sdk";
 import { config } from "dotenv";
 import { parseAbi, encodeFunctionData, Calls } from "viem";
@@ -74,8 +72,18 @@ async function initializeSmartAccount() {
   }
 }
 
-// Initialize immediately
-initializeSmartAccount();
+// Initialize immediately with robust error handling
+(async () => {
+  try {
+    await initializeSmartAccount();
+  } catch (error) {
+    console.error("🚨 Fatal: Smart account initialization failed at startup. Lambda will not function correctly.", error);
+    // Optionally re-throw or exit if this is a critical dependency for the Lambda to function
+    // throw error; 
+    // process.exit(1);
+  }
+})();
+
 
 interface PaymentDistribution {
   amountPaid: number;
