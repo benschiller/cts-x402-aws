@@ -1,0 +1,45 @@
+{
+  "type": "module",
+  "bin": {
+    "reports": "./build/x402ExpressServer.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/x402ExpressServer.js && chmod 755 build/x402McpServer.js",
+    "build:express": "tsc && chmod 755 build/x402ExpressServer.js",
+    "start:express": "node --loader ts-node/esm src/x402ExpressServer.ts",
+    "dev:express": "nodemon --quiet --exec node --loader ts-node/esm src/x402ExpressServer.ts 2>/dev/null",
+    "build:mcp": "tsc && chmod 755 build/x402McpServer.js",
+    "start:mcp": "node --loader ts-node/esm src/x402McpServer.ts",
+    "dev:mcp": "nodemon --quiet --exec node --loader ts-node/esm src/x402McpServer.ts 2>/dev/null",
+    "start:all": "concurrently \"npm run start:express\" \"npm run start:mcp\"",
+    "dev:all": "concurrently \"npm run dev:express\" \"npm run dev:mcp\"",
+    "lint": "eslint \"{src,apps,libs}/**/*.ts\""
+  },
+  "dependencies": {
+    "@coinbase/cdp-sdk": "^1.16.0",
+    "@coinbase/coinbase-sdk": "^0.25.0",
+    "@coinbase/x402": "^0.4.0",
+    "@modelcontextprotocol/sdk": "^1.12.3",
+    "axios": "^1.10.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "viem": "^2.31.3",
+    "x402-axios": "^0.4.0",
+    "x402-express": "^0.4.0",
+    "zod": "^3.25.64"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.29.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1"
+  }
+}
