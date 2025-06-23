@@ -169,7 +169,7 @@ The system will consist of three main components in AWS:
 *   **Method**: Use the AWS SDK (AWS SDK for JavaScript/TypeScript) to call the `InvokeInlineAgent` API.
 *   **Configuration in `InvokeInlineAgent` call**:
     *   `instruction`: Provide clear instructions for the agent (e.g., "You are an assistant that helps users find and retrieve CryptoTwitter.Space reports. Some reports require payment.").
-    *   `foundationModel`: Specify the desired model (e.g., `anthropic.claude-3-sonnet-20240229-v1:0` or **Amazon Nova** if available and preferred).
+    *   `foundationModel`: Specify the desired model **Amazon Nova**.
     *   `actionGroups`: An array defining your tools. Each entry will include:
         *   `name` (e.g., "ReportActions")
         *   `apiSchema`: Your OpenAPI YAML content (from step 3, parsed as a string).

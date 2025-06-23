@@ -7,7 +7,7 @@ import { distributeIncomingPayment, validateAddresses } from "./smartDistributio
 // Load environment variables from .env file
 config();
 
-const REPORTS_API_BASE = "https://cryptotwitter.space";
+const REPORTS_API_BASE = process.env.REPORTS_API_BASE || "https://cryptotwitter.space";
 
 // Validate and get the receiving wallet address from environment variables
 const RECEIVING_WALLET_ADDRESS = process.env.RECEIVING_WALLET_ADDRESS as `0x${string}`;
@@ -109,6 +109,24 @@ app.get("/search-reports", async (req: Request, res: Response) => {
   }
 
   const reportSummaries = filteredReports.map(report => ({
+    id: report.id,
+    title: report.space_title,
+  }));
+
+  res.json(reportSummaries);
+});
+
+// Route for browse-reports (remains free)
+app.get("/browse-reports", async (req: Request, res: Response) => {
+  const reportsUrl = `${REPORTS_API_BASE}/api/reports?page=1`; // Assuming page=1 for MVP
+  const reportsData = await makeHttpRequest<ReportsApiResponse>(reportsUrl);
+
+  if (!reportsData) {
+    res.status(500).json({ error: "Failed to retrieve reports data." });
+    return;
+  }
+
+  const reportSummaries = reportsData.data.map(report => ({
     id: report.id,
     title: report.space_title,
   }));
