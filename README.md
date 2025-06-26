@@ -1,8 +1,8 @@
-# CryptoTwitter.Space x402 Bedrock Agent
+# CryptoTwitter.Space x402 Amazon Bedrock Agent
 
 ## 🚀 Agents in Action Hackathon Entry
 
-**CryptoTwitter.Space x402 Bedrock Agent** is an entry for the "Agents in Action" hackathon, showcasing the power of autonomous, on-chain commerce using **x402pay and CDP Wallet** with integrated **Amazon Bedrock, Nova Pro, App Runner, and Lambda**.
+**CryptoTwitter.Space x402 Amazon Bedrock Agent** is an entry for the "Agents in Action" hackathon, showcasing the power of autonomous, on-chain commerce using **x402pay and CDP Wallet** with integrated **Amazon Bedrock, Nova Pro, App Runner, and Lambda**.
 
 ## ✨ Project Overview
 
@@ -10,7 +10,7 @@ This application acts as a micro-SaaS service, providing **gated, pay-per-use ac
 
 The innovation lies in its ability to empower **agentic commerce with automated payouts**, demonstrating a complete revenue-generating loop for a proprietary data stream. Furthermore, it integrates with **Amazon Bedrock** to enable natural language interaction, allowing users to query and purchase reports using an AI agent.
 
-Currently **human-in-the-loop**, this system is designed to evolve toward full autonomy in future iterations.
+Currently **human-in-the-loop**, this system is designed to evolve toward full autonomy in future iterations driven by an AI character with a unique personality, rich narrative, and compelling backstory on platforms such as Virtuals or Eliza.
 
 ## 💡 Problem Solved
 
@@ -20,7 +20,7 @@ What’s missing is a co-pilot agent: one that understands the trader’s intent
 
 But the deeper problem is economic: valuable signals are being shared in public forums, but there’s no incentive for hosts, speakers, or curators to surface, structure, and distribute that information. The trader suffers because high-signal alpha is lost in the noise because the market has no mechanism to reward those who find it first.
 
-**CryptoTwitter.Space x402 Bedrock Agent** solves the trader's problem by turning information into a monetizable asset class. Paid Alpha Reports are instantly revenue-shared via smart contracts between the Space host, the report curator, and the platform—creating a new incentive economy around signal discovery. This is the foundation of InfoFi—a financial layer for real-time information.
+**CryptoTwitter.Space x402 Amazon Bedrock Agent** solves the trader's problem by turning information into a monetizable asset class. Paid Alpha Reports are instantly revenue-shared via smart contracts between the Space host, the report curator, and the platform—creating a new incentive economy around signal discovery. This is the foundation of InfoFi—a financial layer for real-time information.
 
 ## ⚙️ Use Case: Searching for Bitcoin Alpha
 
@@ -58,8 +58,9 @@ By the end of the session, the trader has context others missed—and the ecosys
 
 ## 📺 Demo
 
-A video demonstration of the project is available here:
-[Link to your Demo Video]
+[Watch the Full Demonstration](https://www.youtube.com/watch?v=b_pt2Mx4c1Y)
+
+[![Watch the Full Demonstration](https://i.imgur.com/F5Ndrrd.png)](https://www.youtube.com/watch?v=b_pt2Mx4c1Y)
 
 ## 🛠️ Technologies Used
 
@@ -83,6 +84,11 @@ This project directly tackles the hackathon's judging criteria:
 *   **Creativity: novel agents or new financial primitives:** By combining pay-per-use access with automated, multi-party on-chain distribution orchestrated by an AI agent, it creates a novel financial primitive for API monetization.
 *   **Technical execution: clean, working code with a video demo:** The codebase is well-structured, functional, and demonstrated via a comprehensive video.
 *   **Effective and creative use of Amazon Bedrock:** The project fully integrates an **Amazon Bedrock Agent** leveraging **Amazon Nova Pro** to act as the primary interface for users, demonstrating how AI can orchestrate complex on-chain financial workflows.
+
+## 💰 Verifable On-chain Payments
+
+*   **Autonomous Payment:** https://sepolia.basescan.org/tx/0xa7170793aad075117e5e53aa1890c86e3eb21b810cdef99e9f7a61b39addb138
+*   **Revenue Distribution:** https://sepolia.basescan.org/tx/0xbd69bafbce4e5130c5407e1baf2b9df838496b5a485771230fecf56a6390f7b6#eventlog
 
 ## ⚙️ Local Setup (for Judges)
 
